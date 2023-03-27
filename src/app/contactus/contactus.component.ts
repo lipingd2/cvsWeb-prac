@@ -8,6 +8,8 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class ContactusComponent {
   form!: FormGroup
+  submit: boolean = false
+  formdata!:any
   
   get name() {
     return this.form.get('name') as FormControl
@@ -25,5 +27,14 @@ export class ContactusComponent {
       name: ['', [Validators.required]],
       message: ['', [Validators.required]],
     });
+  }
+
+  onSubmit() { 
+    if (this.form.invalid) {
+      return;
+    } else { 
+      this.formdata = { name: this.name.value, message: this.message.value };
+      this.submit = true
+    }
   }
 }

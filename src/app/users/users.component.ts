@@ -22,10 +22,11 @@ export class UsersComponent {
     this.userinfor$ = this.userService.userinfor$.subscribe((data: UserInfor[]) => { 
       this.userinfor = data;
     })
-    for (let i = 0; i < this.usrN; i++) {
-      this.subs.push(this.userService.getuserinfor().subscribe());
+    if (this.userinfor.length === 0) {
+      for (let i = 0; i < this.usrN; i++) {
+        this.subs.push(this.userService.getuserinfor().subscribe());
+      }
     }
-
   }
 
   ngOnDestroy() {

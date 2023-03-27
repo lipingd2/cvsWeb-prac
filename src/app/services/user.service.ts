@@ -24,12 +24,10 @@ export class UserService {
         }))
       ),
       tap((data: any) => { 
-        if (this.userinfor.length === 8) {
-          this.userinfor = data
-        } else {
-          this.userinfor = [...this.userinfor,data[0]]
+        if (this.userinfor.length !== 8) {
+          this.userinfor = [...this.userinfor, data[0]]
+          this.userinfor$.next(this.userinfor)
         }
-        this.userinfor$.next(this.userinfor)
         console.log(this.userinfor)
       }),
     );

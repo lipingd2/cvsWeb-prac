@@ -1,5 +1,5 @@
 <h1> Contact US</h1>
-<form [formGroup]="form" action="">
+<form [formGroup]="form" action="" *ngIf="!submit" (ngSubmit) = "onSubmit()">
     <div>
         <label for="name"> Name:</label>
         <input type="text" id="name" formControlName="name" />
@@ -15,5 +15,15 @@
         <div *ngIf="message.errors?.['required']"> message must be entered</div>
         <div *ngIf="message.errors?.['minlength']"> message must be more than 10 character!</div>
     </div>
-    <button type="button"> Submit Message</button>
+    <button type="button" (click) = "onSubmit()"> Submit Message</button>
 </form>
+
+<div class="finish" *ngIf="submit"> 
+    <h2>Thanks for submit the form!</h2>
+    <hr>
+    <p>We have submiited the following message</p>
+    <p>Name:</p>
+    <p>{{formdata.name}}</p>
+    <p>Message:</p>
+    <p>{{formdata.message}}</p>
+</div>
