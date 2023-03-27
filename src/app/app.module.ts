@@ -8,18 +8,19 @@ import { UsersComponent } from './users/users.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UsersModule } from './users/users.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    ContactusComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    UsersModule
+    FormsModule,
+    ReactiveFormsModule,
     
   ],
   providers: [],

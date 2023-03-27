@@ -1,6 +1,6 @@
 <h1>CVS Users</h1>
-<div class="load" *ngIf="userinfor.length !== 8"> Loading...</div>
-<div *ngIf="userinfor.length === 8">
+<div class="load" *ngIf="userinfor.length < 8"> Loading...</div>
+<div *ngIf="userinfor.length >= 8">
     <app-usercard *ngFor = "let user of userinfor"
     [user] = user></app-usercard>
 </div>

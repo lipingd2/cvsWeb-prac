@@ -1,1 +1,19 @@
-<p>contactus works!</p>
+<h1> Contact US</h1>
+<form [formGroup]="form" action="">
+    <div>
+        <label for="name"> Name:</label>
+        <input type="text" id="name" formControlName="name" />
+    </div>
+    <div *ngIf="!name.valid && (name.dirty || name.touched)">
+        <div *ngIf="name.errors?.['required']"> Name must be entered</div>
+    </div>
+    <div>
+        <label for="Message"> Message:</label>
+        <textarea type="text" cols="40" rows="5" id="Message"formControlName="message" minlength="10"></textarea>
+    </div>
+    <div *ngIf="!message.valid && (message.dirty || message.touched)">
+        <div *ngIf="message.errors?.['required']"> message must be entered</div>
+        <div *ngIf="message.errors?.['minlength']"> message must be more than 10 character!</div>
+    </div>
+    <button type="button"> Submit Message</button>
+</form>

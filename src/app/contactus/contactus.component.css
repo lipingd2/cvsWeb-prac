@@ -1,0 +1,22 @@
+h1, form{
+    margin-left: 8%;
+    margin-top: 4%;
+}
+
+label { 
+    display:block 
+}
+
+#name {
+    width: 300px;
+    height:24px;
+}
+button {
+    padding: 10px 8px;
+    border-radius: 7px;
+    color:white;
+    background-color: rgb(178, 74, 54);
+    border: none;
+    box-shadow: 1.7px 1.7px #a0a0a0;
+    cursor: pointer;
+}
