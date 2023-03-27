@@ -1,0 +1,19 @@
+img{
+    float:left;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+.container {
+    padding: 30px 18px;
+    width: 75%;
+    margin-left: 8%;
+    margin-bottom: 10px;
+    background-color: rgb(234, 229, 229);
+}
+p {
+    line-height: 1.5;
+}
+a {
+    text-decoration: none;
+}
+

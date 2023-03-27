@@ -1,0 +1,12 @@
+h1 {
+    margin-left: 8%;
+    margin-top: 4%;
+}
+div {
+    display: flexbox;
+}
+
+.load {
+    margin-left: 8%;
+    margin-top: 4%;
+}

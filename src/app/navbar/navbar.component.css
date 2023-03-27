@@ -1,0 +1,37 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(178, 74, 54);
+  }
+  .nav-brand {
+    text-align: center;
+    color: white;
+    margin-left: 6%;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 1.06rem;
+    cursor:default;
+  }
+
+  li {
+    float:right;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+.last {
+    margin-right: 5%;
+}
+
+  li a:hover {
+    background-color: rgb(201, 85, 61);
+    cursor: pointer;
+  }
